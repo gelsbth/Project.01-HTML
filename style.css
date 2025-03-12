@@ -45,16 +45,16 @@ footer {
 
 .galeri {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Selalu 3 kolom */
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
     gap: 10px;
     padding: 20px;
 }
 
 .galeri img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Semua gambar jadi tinggi yang sama */
+    object-fit: cover; /* Memotong gambar agar tidak gepeng */
     border-radius: 5px;
-    object-fit: cover;
 }
 
 .blogg {
