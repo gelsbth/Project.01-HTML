@@ -43,14 +43,14 @@ footer {
     bottom: 0;
 }
 
-.gallery {
+.galeri {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Selalu 3 kolom */
     gap: 10px;
     padding: 20px;
 }
 
-.gallery img {
+.galeri img {
     width: 100%;
     height: auto;
     border-radius: 5px;
