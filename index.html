@@ -6,21 +6,42 @@
     <title>Home - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    // Alert saat buka halaman
+    window.onload = function() {
+        alert("Welcome to Gloria's Portfolio!");
+    };
+
+    // Ganti warna teks nama saat diklik
+    const nama = document.getElementById("nama");
+    nama.addEventListener("click", function() {
+        nama.style.color = "#3498db";
+    });
+
+    // Tambahkan event untuk semua link navbar
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            alert("Navigating to: " + link.textContent);
+            // Kamu juga bisa pakai console.log("...") kalau tidak mau alert
+        });
+    });
+</script>
 <body>
     <header>
         <h1>Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section>
-        <h2>Hello, I'm Gloria Rondonuwu</h2>
+        <h2 id="nama">Hello, I'm Gloria Rondonuwu</h2>
         <p>Welcome to my personal portfolio website where I share my hobbies,
             favorite photos, and some of the projects I've worked on.
             Feel free to explore!</p>
